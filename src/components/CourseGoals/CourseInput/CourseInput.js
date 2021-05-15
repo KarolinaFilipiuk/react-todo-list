@@ -8,7 +8,9 @@ const CourseInput = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    props.onAddGoal(enteredValue);
+    if (enteredValue.length) {
+      props.onAddGoal(enteredValue);
+    }
     setEnteredValue("");
   };
 
